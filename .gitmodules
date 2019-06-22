@@ -1,0 +1,3 @@
+[submodule "Angular"]
+	path = Angular
+	url = https://github.com/JuanPabloMunozBouchard/Angular.git
