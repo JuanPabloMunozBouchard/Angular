@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col">
+        <h1>*ngIf</h1>
+        <hr />
+        <div class="card" style="width: 18rem;" *ngIf="mostrar" >
+            <div class="card-body">
+                <h5 class="card-title">{{frase.autor}}</h5>
+                <p class="card-text">
+                    {{frase.mensaje}}                    
+                </p>
+            </div>
+        </div>
+        <button (click)=" mostrar = !mostrar" class="btn btn-primary">Ocultar/mostrar</button>
+    </div>
+    <div class="col">
+        <h1>*ngfor</h1>
+        <hr />
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Personajes</h5>
+                <p class="card-text" *ngFor="let personaje of personajes; let i = index">
+                    {{i+1}} - {{personaje}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
