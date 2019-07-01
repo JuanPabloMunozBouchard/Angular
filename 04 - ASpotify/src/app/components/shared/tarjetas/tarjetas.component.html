@@ -1,0 +1,15 @@
+<div class="card-columns m-5  animated fadeIn">
+
+        <div class="card" *ngFor="let item of items" style="width: 18rem;">
+          <img [src]="item.images | noimage" class="card-img-top"  />
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text" *ngFor="let artista of item.artists" >
+              {{ artista.name }}
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      
+      </div>
+      
