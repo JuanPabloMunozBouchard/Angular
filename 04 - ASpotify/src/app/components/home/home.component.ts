@@ -11,12 +11,21 @@ export class HomeComponent implements OnInit {
   nuevasCanciones: any[] = [];
   loading = true;
 
+  error: boolean;
+
   constructor(private spotify: SpotifyService) {
+    this.error = false;
     this.spotify.getNewRealeses()
     .subscribe((data) => {
       this.nuevasCanciones = data;
       this.loading = false;
-    });
+    },
+    ( responseError ) => {
+      this.error = true;
+      this.loading = false;
+
+    }
+    );
   }
 
   ngOnInit() {
